@@ -5,16 +5,27 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserRegFormValidation {
-	 public String regex;
+	public String regex;
 
-	    public void firstName(String firstName) {
+	//method for validation of user first name using regex
+	public void firstName(String firstName) {
+		regex = "^[A-Z]{1}[a-z]{2,}$";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(firstName);
+		if (matcher.matches()) {
+			System.out.println("Valid !");
+		} else {
+			System.out.println("InValid !");
+		}
+	}
+	 public void lastName(String lastName) {
 	        regex = "^[A-Z]{1}[a-z]{2,}$";
 	        Pattern pattern = Pattern.compile(regex);
-	        Matcher matcher = pattern.matcher(firstName);
+	        Matcher matcher = pattern.matcher(lastName);
 	        if (matcher.matches()) {
-	            System.out.println("Valid !");
+	            System.out.println("Valid");
 	        } else {
-	            System.out.println("InValid !");
+	            System.out.println("InValid");
 	        }
 	    }
 }
