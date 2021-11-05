@@ -13,9 +13,15 @@ public class UserRegistrationFunctionality {
 		validation.firstName(firstName);
 	}
 	// method to take last name and call lastname method
-	  public void userLastName() {
-	        System.out.println("Enter Your Last Name : ");
-	        String lastName = scanner.next();
-	        validation.lastName(lastName);
-	    }
+	public void userLastName() {
+		System.out.println("Enter Your Last Name : ");
+		String lastName = scanner.next();
+		validation.lastName(lastName);
+	}
+	//method for email validation
+	public void userEmailId() {
+		System.out.println("Enter Your EmailId : ");
+		String emailId = scanner.next();
+		validation.emailId(emailId);
+	}
 }

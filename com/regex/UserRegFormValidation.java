@@ -18,14 +18,28 @@ public class UserRegFormValidation {
 			System.out.println("InValid !");
 		}
 	}
-	 public void lastName(String lastName) {
-	        regex = "^[A-Z]{1}[a-z]{2,}$";
-	        Pattern pattern = Pattern.compile(regex);
-	        Matcher matcher = pattern.matcher(lastName);
-	        if (matcher.matches()) {
-	            System.out.println("Valid");
-	        } else {
-	            System.out.println("InValid");
-	        }
-	    }
+
+	//method for validation of user last name using regex
+	public void lastName(String lastName) {
+		regex = "^[A-Z]{1}[a-z]{2,}$";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(lastName);
+		if (matcher.matches()) {
+			System.out.println("Valid");
+		} else {
+			System.out.println("InValid");
+		}
+	}
+
+	//method for validation of user Email using regex
+	public void emailId(String emailId) {
+		regex = "^[a-zA-Z0-9]+([.][0-9a-zA-z]+)*@[a-z]+.[a-z]{2,3}$";
+		Pattern pattern  = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(emailId);
+		if (matcher.matches()) {
+			System.out.println("Valid");
+		} else {
+			System.out.println("InValid");
+		}
+	}
 }
