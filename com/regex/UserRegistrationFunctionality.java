@@ -29,4 +29,11 @@ public class UserRegistrationFunctionality {
 		String mobile = scanner.next();
 		validation.mobileNumber(mobile);
 	}
+	
+	//method for password validation
+	public void userPassword() {
+        System.out.println("Enter your MobileNumber");
+        String password = scanner.next();
+        validation.password(password);
+    }
 }
