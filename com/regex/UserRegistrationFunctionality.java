@@ -32,7 +32,7 @@ public class UserRegistrationFunctionality {
 	
 	//method for password validation
 	public void userPassword() {
-        System.out.println("Enter your MobileNumber");
+        System.out.println("Enter your Password");
         String password = scanner.next();
         validation.password(password);
     }
