@@ -42,4 +42,16 @@ public class UserRegFormValidation {
 			System.out.println("InValid");
 		}
 	}
+	
+	//method for validation of user mobile number using regex
+	public void mobileNumber(String mobileNumber) {
+        regex = "^[0-9]{1,2}-[0-9]{10}$";
+        Pattern pattern  = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(mobileNumber);
+        if (matcher.matches()) {
+            System.out.println("Valid");
+        } else {
+            System.out.println("InValid");
+        }
+    }
 }

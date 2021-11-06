@@ -24,4 +24,9 @@ public class UserRegistrationFunctionality {
 		String emailId = scanner.next();
 		validation.emailId(emailId);
 	}
+	public void userMobileNumber() {
+		System.out.println("Enter Your Mobile number : ");
+		String mobile = scanner.next();
+		validation.mobileNumber(mobile);
+	}
 }
